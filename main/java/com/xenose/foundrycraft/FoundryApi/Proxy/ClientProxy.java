@@ -14,7 +14,7 @@ public class ClientProxy implements CommonProxy
 	@Override
 	public void Init() 
 	{	
-		Minecraft.getMinecraft().toggleFullscreen();
+		//Minecraft.getMinecraft().toggleFullscreen();
 	}
 
 	@Override

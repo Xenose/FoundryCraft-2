@@ -18,15 +18,12 @@ import net.minecraft.block.material.Material;
 public class AddObjects 
 {	
 	public static final FoundryItem lowgradesteelingot = new FoundryItem("lowgradesteelingot");
-	public static final FoundryItem mediumgradesteelingot = new FoundryItem("mediumgradesteelingot");
 	public static final FoundryItem highgradesteelingot = new FoundryItem("highgradesteelingot");
 	
 	public static final FoundryItem lowgradesteeldust = new FoundryItem("lowgradesteeldust");
-	public static final FoundryItem mediumgradesteeldust = new FoundryItem("mediumgradesteeldust");
 	public static final FoundryItem highgradesteeldust = new FoundryItem("highgradesteeldust");
 	
 	public static final FoundryBlock lowgradesteelblock = new FoundryBlock(Material.IRON, "lowgradesteelblock");
-	public static final FoundryBlock mediumgradesteelblock = new FoundryBlock(Material.IRON, "mediumgradesteelblock");
 	public static final FoundryBlock highgradesteelblock = new FoundryBlock(Material.IRON, "highgradesteelblock");
 	
 	public static final FoundryItem irondust = new FoundryItem("irondust");
@@ -36,7 +33,7 @@ public class AddObjects
 	public static final Metal cobalt = new Metal("cobalt", 20, 20, 3, 5, 1, 10);
 	public static final Metal copper = new Metal("copper", 4, 10, 2, 7, 50, 60 );
 	public static final Metal lead = new Metal("lead", 16);
-	public static final Metal lithium = new Metal("lithium", 16, 10, 5, 10);
+	public static final Metal lithium = new Metal("lithium", 3, 10, 10, 25);
 	public static final Metal magnesium = new Metal("magnesium", 16);
 	public static final Metal nickel = new Metal("nickel", 16);
 	public static final Metal platinum = new Metal("platinum", 16);
