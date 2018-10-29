@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    
+    "ingredients": [
+        {
+            "item": "xfc:coaldust"
+        },
+        
+        {
+            "item": "xfc:irondust"
+        }
+    ],
+    
+    "result":
+    {
+        "item": "xfc:lowgradesteeldust",
+        "count": 2
+    }
+}

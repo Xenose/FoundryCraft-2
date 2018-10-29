@@ -1,0 +1,34 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    
+    "result":
+    {
+        "item": "xfc:lamp"
+    },
+    
+    "pattern":
+	    [
+	        "igi",
+	        "gdg",
+	        "igi"
+	    ],
+	    
+    "key":
+    {
+        "i":
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        
+        "g":
+        {
+            "item": "minecraft:glass"
+        },
+        
+        "d":
+        {
+            "item": "minecraft:glowstone_dust"
+        }
+    }
+}

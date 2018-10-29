@@ -1,0 +1,71 @@
+#Items
+
+item.aluminiumingot.name=Aluminium Ingot
+item.cobaltingot.name=Cobalt Ingot
+item.copperingot.name=Copper Ingot
+item.leadingot.name=Lead Ingot
+item.lithiumingot.name=Lithium Ingot
+item.magnesiumingot.name=Magnesium Ingot
+item.nickelingot.name=Nickel Ingot
+item.platinumingot.name=Platinum Ingot
+item.silveringot.name=Silver Ingot
+item.tiningot.name=Tin Ingot
+item.titaniumingot.name=Titanium Ingot
+item.tungsteningot.name=Tungsten Ingot
+item.uraniumingot.name=Uranium Ingot
+item.zincingot.name=Zinc Ingot
+
+item.aluminiumdust.name=Aluminium Dust
+item.cobaltdust.name=Cobalt Dust
+item.copperdust.name=Copper Dust
+item.leaddust.name=Lead Dust
+item.lithiumdust.name=Lithium Dust
+item.magnesiumdust.name=Magnesium Dust
+item.nickeldust.name=Nickel Dust
+item.platinumdust.name=Platinum Dust
+item.silverdust.name=Silver Dust
+item.tindust.name=Tin Dust
+item.titaniumdust.name=Titanium Dust
+item.tungstendust.name=Tungsten Dust
+item.uraniumdust.name=Uranium Dust
+item.zincdust.name=Zinc Dust
+
+item.coaldust.name=Coal Dust
+item.irondust.name=Iron Dust
+
+item.lowgradesteeldust.name=Low Grade Steel Dust
+item.lowgradesteelingot.name=Low Grade Steel Ingot
+
+#Blocks
+tile.lamp.name=Lamp
+tile.clearglass.name=Clear Glass
+
+tile.aluminiumore.name=Aluminium Ore
+tile.cobaltore.name=Cobalt Ore
+tile.copperore.name=Copper Ore
+tile.leadore.name=Lead Ore
+tile.lithiumore.name=Lithium Ore
+tile.magnesiumore.name=Magnesium Ore
+tile.nickelore.name=Nickel Ore
+tile.platinumore.name=Platinum Ore
+tile.silverore.name=Silver Ore
+tile.tinore.name=Tin Ore
+tile.titaniumore.name=Titanium Ore
+tile.tungstenore.name=Tungsten Ore
+tile.uraniumore.name=Uranium Ore
+tile.zincore.name=Zinc Ore
+
+tile.aluminiumblock.name=Aluminium Block
+tile.cobaltblock.name=Cobalt Block
+tile.copperblock.name=Copper Block
+tile.leadblock.name=Lead Block
+tile.lithiumblock.name=Lithium Block
+tile.magnesiumblock.name=Magnesium Block
+tile.nickelblock.name=Nickel Block
+tile.platinumblock.name=Platinum Block
+tile.silverblock.name=Silver Block
+tile.tinblock.name=Tin Block
+tile.titaniumblock.name=Titanium Block
+tile.tungstenblock.name=Tungsten Block
+tile.uraniumblock.name=Uranium Block
+tile.zincblock.name=Zinc Block
