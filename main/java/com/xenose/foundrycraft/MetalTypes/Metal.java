@@ -12,11 +12,11 @@ import net.minecraft.block.material.Material;
 
 public class Metal 
 {
-	FoundryItem _dust;
-	FoundryItem _ingot;
+	FoundryItem _dust = null;
+	FoundryItem _ingot = null;
 	
-	FoundryOre _ore;
-	FoundryBlock _block;
+	FoundryOre _ore = null;
+	FoundryBlock _block = null;
 	
 	public Metal(String name, float hardness) 
 	{
@@ -50,11 +50,11 @@ public class Metal
 		_block = new FoundryBlock(Material.IRON, name + "block", hardness);
 		
 		_ore.SetSpawnChance(worldSpawnChance);
-		_ore.SetSpawnSize(maxSpawnSize, minSpawnSize);
-		
+		_ore.SetSpawnSize(maxSpawnSize, minSpawnSize);		
 		_ore.SetMinMaxHight(minHeight, maxHeight);
 		
-		FoundryWorldGen.oreGenList_overWolrd.add(_ore);
+		if (_ore != null)
+			FoundryWorldGen.oreGenList_overWolrd.add(_ore);
 	}
 	
 	public final FoundryItem GetDust() { return _dust; }

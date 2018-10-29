@@ -1,8 +1,10 @@
 package com.xenose.foundrycraft;
 
+import com.xenose.foundrycraft.FoundryApi.FoundryOreDictionary;
 import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
 import com.xenose.foundrycraft.FoundryApi.FoundryWorldGen;
 import com.xenose.foundrycraft.FoundryApi.Proxy.CommonProxy;
+import com.xenose.foundrycraft.blocks.FoundryOre;
 import com.xenose.foundrycraft.crafting.FoundryRecipes;
 
 import net.minecraft.block.material.Material;
@@ -43,6 +45,7 @@ public class FoundryCraft
     {
     	commonProxy.Init();
     	FoundryRecipes.Init();
+    	FoundryOreDictionary.Init();
     }
     
     @EventHandler
