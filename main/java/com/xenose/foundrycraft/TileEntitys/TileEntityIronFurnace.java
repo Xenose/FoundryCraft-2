@@ -303,7 +303,8 @@ public class TileEntityIronFurnace extends FoundryTileEntity implements ITickabl
 
 	
 
-	private int GetItemBurnTime(ItemStack itemStack) {
+	private int GetItemBurnTime(ItemStack itemStack) 
+	{
 		// TODO Auto-generated method stub
 		return 0;
 	}
