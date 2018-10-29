@@ -44,6 +44,7 @@ public class AddObjects
 	public static final Metal uranium = new Metal("uranium", 16);
 	public static final Metal zinc = new Metal("zinc", 16);
 	
+	public static final FoundryBlock snowstone = new FoundryBlock(Material.ROCK, "snowstone", 1);
 	public static final FoundryLamp lamp = new FoundryLamp(Material.GLASS, "lamp", 2);
 	public static final FoundryGlass clearglass = new FoundryGlass(Material.GLASS, "clearglass", 1);
 	
@@ -92,6 +93,7 @@ public class AddObjects
 		itemList.add(lowgradesteeldust);
 		itemList.add(lowgradesteelingot);
 		
+		blockList.add(snowstone);
 		blockList.add(lamp);
 		blockList.add(clearglass);
 	}
