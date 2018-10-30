@@ -3,7 +3,8 @@
     
     "ingredients": [
         {
-            "item": "minecraft:stone"
+            "item": "minecraft:stone",
+            "data": 0
         },
         
         {
@@ -15,6 +16,6 @@
     "result":
     {
         "item": "xfc:snowstone",
-        "count": 2
+        "count": 1
     }
 }
