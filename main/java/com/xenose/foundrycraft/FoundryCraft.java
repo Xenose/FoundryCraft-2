@@ -1,10 +1,10 @@
 package com.xenose.foundrycraft;
 
-import com.xenose.foundrycraft.FoundryApi.FoundryOre;
 import com.xenose.foundrycraft.FoundryApi.FoundryOreDictionary;
 import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
 import com.xenose.foundrycraft.FoundryApi.FoundryWorldGen;
 import com.xenose.foundrycraft.FoundryApi.Proxy.CommonProxy;
+import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
 import com.xenose.foundrycraft.TileEntitys.TileEntityIronFurnace;
 import com.xenose.foundrycraft.crafting.FoundryRecipes;
 
@@ -32,10 +32,6 @@ public class FoundryCraft
 	@EventHandler
     public void PreInit(FMLPreInitializationEvent event)
     {
-		for(int i = 0; i < 100; i++) 
-		{
-			System.out.println("");
-		}
 		AddObjects.Init();
 		System.out.println("FoundryCraft [Blocks loaded] : " + FoundryRegister.blockCount + ", [Items loaded] : " + FoundryRegister.itemCount);
 		
@@ -46,13 +42,13 @@ public class FoundryCraft
     public void Init(FMLInitializationEvent event)
     {
     	commonProxy.Init();
-    	FoundryRecipes.Init();
     	FoundryOreDictionary.Init();
+    	FoundryRecipes.Init();
     }
     
     @EventHandler
     public void PostInit(FMLPostInitializationEvent event) 
     {
-    	
     }
+    
 }

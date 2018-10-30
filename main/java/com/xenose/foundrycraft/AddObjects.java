@@ -5,9 +5,9 @@ import java.util.List;
 
 import javax.swing.plaf.metal.MetalScrollBarUI;
 
-import com.xenose.foundrycraft.FoundryApi.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.FoundryItem;
 import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
+import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 import com.xenose.foundrycraft.MetalTypes.Metal;
 import com.xenose.foundrycraft.blocks.BleedingObsidian;
 import com.xenose.foundrycraft.blocks.ClearGlass;
@@ -38,7 +38,7 @@ public class AddObjects
 	public static final Metal lithium = new Metal("lithium", 3, 10, 10, 25);
 	public static final Metal magnesium = new Metal("magnesium", 16);
 	public static final Metal nickel = new Metal("nickel", 16);
-	public static final Metal platinum = new Metal("platinum", 16);
+	public static final Metal platinum = new Metal("platinum", 20, 1, 1, 1, 1, 2);
 	public static final Metal silver = new Metal("silver", 16);
 	public static final Metal tin = new Metal("tin", 16);
 	public static final Metal titanium = new Metal("titanium", 16);
@@ -84,6 +84,7 @@ public class AddObjects
 		lithium.AddToList(itemList, blockList);
 		magnesium.AddToList(itemList, blockList);
 		nickel.AddToList(itemList, blockList);
+		platinum.AddToList(itemList, blockList);
 		silver.AddToList(itemList, blockList);
 		tin.AddToList(itemList, blockList);
 		titanium.AddToList(itemList, blockList);

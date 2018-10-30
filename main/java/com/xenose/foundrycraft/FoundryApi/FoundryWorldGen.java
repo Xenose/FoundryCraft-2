@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.xenose.foundrycraft.AddObjects;
+import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;

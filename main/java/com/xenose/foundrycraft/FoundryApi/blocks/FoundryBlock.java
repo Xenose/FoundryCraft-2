@@ -1,4 +1,4 @@
-package com.xenose.foundrycraft.FoundryApi;
+package com.xenose.foundrycraft.FoundryApi.blocks;
 
 import java.util.Random;
 
@@ -6,6 +6,7 @@ import com.xenose.foundrycraft.FoundryCraft;
 import com.xenose.foundrycraft.FoundryCraftData;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockRenderLayer;
@@ -54,6 +55,11 @@ public class FoundryBlock extends Block
         this.setLightOpacity(opacity);
     }
 	
+	public void SetSoundType(SoundType sound) 
+	{
+		this.setSoundType(sound);
+	}
+	
 	public void SetBlockLayer() 
 	{
 	}
@@ -66,10 +72,5 @@ public class FoundryBlock extends Block
 
     public void IsFullBlock(IBlockState state)
     {
-    }
-
-    protected boolean CanSilkHarvest()
-    {
-        return CanSilkHarvest();
     }
 }

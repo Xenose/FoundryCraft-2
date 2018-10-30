@@ -1,7 +1,8 @@
 package com.xenose.foundrycraft.blocks;
 
-import com.xenose.foundrycraft.FoundryApi.FoundryBlock;
+import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockRenderLayer;
@@ -11,13 +12,11 @@ import net.minecraft.world.IBlockAccess;
 
 public class ClearGlass extends FoundryBlock
 {
-	
-	
 	public ClearGlass(String name) 
 	{
 		super(Material.GLASS, name);
 		SetHardness(2);
-		
+		SetSoundType(SoundType.GLASS);
 	}
 	
 	@Override
@@ -37,5 +36,4 @@ public class ClearGlass extends FoundryBlock
 	{
 		return true;
 	}
-
 }

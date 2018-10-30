@@ -2,10 +2,11 @@ package com.xenose.foundrycraft.blocks.machines;
 
 import com.xenose.foundrycraft.FoundryCraft;
 import com.xenose.foundrycraft.FoundryCraftData;
-import com.xenose.foundrycraft.FoundryApi.FoundryBlockAdvanceBlock;
+import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlockAdvanceBlock;
 import com.xenose.foundrycraft.TileEntitys.TileEntityIronFurnace;
 
 import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.IBlockState;
@@ -23,6 +24,7 @@ public class IronFurnace extends FoundryBlockAdvanceBlock
 	{
 		super(Material.IRON, name);
 		SetHardness(4);
+		SetSoundType(SoundType.METAL);
 	}
 
 

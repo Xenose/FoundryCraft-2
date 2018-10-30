@@ -1,4 +1,4 @@
-package com.xenose.foundrycraft.FoundryApi;
+package com.xenose.foundrycraft.FoundryApi.blocks;
 
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;

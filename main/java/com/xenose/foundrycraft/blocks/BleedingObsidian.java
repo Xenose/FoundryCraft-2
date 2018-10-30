@@ -1,7 +1,8 @@
 package com.xenose.foundrycraft.blocks;
 
-import com.xenose.foundrycraft.FoundryApi.FoundryBlock;
+import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,6 +17,7 @@ public class BleedingObsidian extends FoundryBlock
 	public BleedingObsidian(String name) 
 	{ 
 		super(Material.ROCK, name); 
+		setSoundType(SoundType.STONE);
 	}
 	
 	@Override

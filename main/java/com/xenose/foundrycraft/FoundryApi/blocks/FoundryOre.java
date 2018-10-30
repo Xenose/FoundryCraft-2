@@ -1,5 +1,6 @@
-package com.xenose.foundrycraft.FoundryApi;
+package com.xenose.foundrycraft.FoundryApi.blocks;
 
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
 public class FoundryOre extends FoundryBlock
@@ -13,7 +14,8 @@ public class FoundryOre extends FoundryBlock
 	
 	public FoundryOre(String name) 
 	{
-		super(Material.ROCK, name); 
+		super(Material.ROCK, name);
+		SetSoundType(SoundType.STONE);
 	}
 	
 	public void SetSpawnChance(int chance) 
