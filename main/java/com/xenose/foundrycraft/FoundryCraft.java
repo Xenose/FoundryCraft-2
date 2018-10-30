@@ -41,6 +41,7 @@ public class FoundryCraft
 		System.out.println("FoundryCraft [Blocks loaded] : " + FoundryRegister.blockCount + ", [Items loaded] : " + FoundryRegister.itemCount);
 		
 		GameRegistry.registerWorldGenerator(new FoundryWorldGen(), 3);
+		GameRegistry.registerTileEntity(TileEntityIronFurnace.class, new ResourceLocation(""));
     }
 
     @EventHandler
