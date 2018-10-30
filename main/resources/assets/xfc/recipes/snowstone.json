@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    
+    "ingredients": [
+        {
+            "item": "minecraft:stone"
+        },
+        
+        {
+            "item": "minecraft:dye",
+            "data": 15
+        }
+    ],
+    
+    "result":
+    {
+        "item": "xfc:snowstone",
+        "count": 2
+    }
+}
