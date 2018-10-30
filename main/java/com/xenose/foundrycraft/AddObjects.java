@@ -38,7 +38,7 @@ public class AddObjects
 	public static final Metal lithium = new Metal("lithium", 3, 10, 10, 25);
 	public static final Metal magnesium = new Metal("magnesium", 16);
 	public static final Metal nickel = new Metal("nickel", 16);
-	public static final Metal platinum = new Metal("platinum", 20, 1, 1, 1, 1, 2);
+	public static final Metal platinum = new Metal("platinum", 20, 40, 1, 2, 0, 1);
 	public static final Metal silver = new Metal("silver", 16);
 	public static final Metal tin = new Metal("tin", 16);
 	public static final Metal titanium = new Metal("titanium", 16);

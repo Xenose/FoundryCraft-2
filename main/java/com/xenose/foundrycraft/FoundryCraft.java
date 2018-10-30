@@ -9,7 +9,9 @@ import com.xenose.foundrycraft.TileEntitys.TileEntityIronFurnace;
 import com.xenose.foundrycraft.crafting.FoundryRecipes;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -18,6 +20,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = FoundryCraftData.id, name = FoundryCraftData.name, version = FoundryCraftData.version)
 public class FoundryCraft
@@ -32,6 +36,7 @@ public class FoundryCraft
 	@EventHandler
     public void PreInit(FMLPreInitializationEvent event)
     {
+		
 		AddObjects.Init();
 		System.out.println("FoundryCraft [Blocks loaded] : " + FoundryRegister.blockCount + ", [Items loaded] : " + FoundryRegister.itemCount);
 		
@@ -49,6 +54,7 @@ public class FoundryCraft
     @EventHandler
     public void PostInit(FMLPostInitializationEvent event) 
     {
+    	
     }
     
 }
