@@ -40,14 +40,17 @@ public class Metal
 		
 		if (name != "lithium")
 		{
-			_ore = new FoundryOre(Material.ROCK, name + "ore", hardness);
+			_ore = new FoundryOre(name + "ore");
 		}
 		else 
 		{
-			_ore = new LithiumOre(Material.ROCK, name + "ore", hardness, 16);
+			_ore = new LithiumOre(name + "ore");
 		}
 		
-		_block = new FoundryBlock(Material.IRON, name + "block", hardness);
+		_block = new FoundryBlock(Material.IRON, name + "block");
+		
+		_block.SetHardness(hardness);
+		_ore.SetHardness(hardness);
 		
 		_ore.SetSpawnChance(worldSpawnChance);
 		_ore.SetSpawnSize(maxSpawnSize, minSpawnSize);		

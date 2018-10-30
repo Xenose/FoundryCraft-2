@@ -9,22 +9,15 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class FoundryGlass extends FoundryBlock
+public class ClearGlass extends FoundryBlock
 {
 	
-	public FoundryGlass(Material materialIn) 
-	{
-		super(materialIn, "setNamePlzzz", 1);
-	}
 	
-	public FoundryGlass(Material materialIn, String name) 
+	public ClearGlass(String name) 
 	{
-		super(materialIn, name, 1);
-	}
-
-	public FoundryGlass(Material materialIn, String name, float hardness) 
-	{
-		super(materialIn, name, hardness);
+		super(Material.GLASS, name);
+		SetHardness(2);
+		
 	}
 	
 	@Override

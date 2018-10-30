@@ -11,9 +11,10 @@ public class FoundryOre extends FoundryBlock
 	int _max = 70, _min = 16;
 	
 	
-	public FoundryOre(Material materialIn) { super(materialIn); }
-	public FoundryOre(Material materialIn, String name) { super(materialIn, name); }
-	public FoundryOre(Material materialIn, String name, float hardness) { super(materialIn, name, hardness); }
+	public FoundryOre(String name) 
+	{
+		super(Material.ROCK, name); 
+	}
 	
 	public void SetSpawnChance(int chance) 
 	{

@@ -8,4 +8,6 @@ public class FoundryCraftData
 	
 	public static final String clientProxy = "com.xenose.foundrycraft.FoundryApi.Proxy.ClientProxy";
 	public static final String serverProxy = "com.xenose.foundrycraft.FoundryApi.Proxy.serverProxy";
+	
+	public static final int GUI_IRON_FURNACE = 0;
 }

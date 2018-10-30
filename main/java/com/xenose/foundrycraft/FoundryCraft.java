@@ -5,9 +5,11 @@ import com.xenose.foundrycraft.FoundryApi.FoundryOreDictionary;
 import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
 import com.xenose.foundrycraft.FoundryApi.FoundryWorldGen;
 import com.xenose.foundrycraft.FoundryApi.Proxy.CommonProxy;
+import com.xenose.foundrycraft.TileEntitys.TileEntityIronFurnace;
 import com.xenose.foundrycraft.crafting.FoundryRecipes;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;

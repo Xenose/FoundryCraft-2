@@ -10,9 +10,10 @@ import com.xenose.foundrycraft.FoundryApi.FoundryItem;
 import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
 import com.xenose.foundrycraft.MetalTypes.Metal;
 import com.xenose.foundrycraft.blocks.BleedingObsidian;
-import com.xenose.foundrycraft.blocks.FoundryGlass;
-import com.xenose.foundrycraft.blocks.FoundryLamp;
-import com.xenose.foundrycraft.items.FoundryCoolDust;
+import com.xenose.foundrycraft.blocks.ClearGlass;
+import com.xenose.foundrycraft.blocks.Lamp;
+import com.xenose.foundrycraft.blocks.machines.IronFurnace;
+import com.xenose.foundrycraft.items.CoalDust;
 
 import net.minecraft.block.material.Material;
 
@@ -28,7 +29,7 @@ public class AddObjects
 	public static final FoundryBlock highgradesteelblock = new FoundryBlock(Material.IRON, "highgradesteelblock");
 	
 	public static final FoundryItem irondust = new FoundryItem("irondust");
-	public static final FoundryCoolDust coaldust = new FoundryCoolDust("coaldust");
+	public static final CoalDust coaldust = new CoalDust("coaldust");
 	
 	public static final Metal aluminium = new Metal("aluminium", 4, 18, 2, 5, 60, 150);
 	public static final Metal cobalt = new Metal("cobalt", 20, 20, 3, 5, 1, 10);
@@ -45,11 +46,12 @@ public class AddObjects
 	public static final Metal uranium = new Metal("uranium", 16);
 	public static final Metal zinc = new Metal("zinc", 16);
 	
-	public static final FoundryBlock snowstone = new FoundryBlock(Material.ROCK, "snowstone", 1);
-	public static final FoundryLamp lamp = new FoundryLamp(Material.GLASS, "lamp", 2);
-	public static final FoundryGlass clearglass = new FoundryGlass(Material.GLASS, "clearglass", 1);
-	public static final BleedingObsidian bleedingobsidian = new BleedingObsidian(Material.ROCK, "bleedingobsidian" , 40);
+	public static final FoundryBlock snowstone = new FoundryBlock("snowstone");
+	public static final Lamp lamp = new Lamp("lamp");
+	public static final ClearGlass clearglass = new ClearGlass("clearglass");
+	public static final BleedingObsidian bleedingobsidian = new BleedingObsidian("bleedingobsidian");
 	
+	public static final IronFurnace ironfurnace = new IronFurnace("ironfurnace");
 	
 	private static List<FoundryItem> itemList;
 	private static List<FoundryBlock> blockList;
@@ -99,6 +101,7 @@ public class AddObjects
 		blockList.add(lamp);
 		blockList.add(clearglass);
 		blockList.add(bleedingobsidian);
+		blockList.add(ironfurnace);
 	}
 
 }

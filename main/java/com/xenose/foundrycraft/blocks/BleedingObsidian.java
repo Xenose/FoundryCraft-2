@@ -13,9 +13,10 @@ import net.minecraft.world.World;
 
 public class BleedingObsidian extends FoundryBlock
 {
-	public BleedingObsidian(Material materialIn) { super(materialIn); }
-	public BleedingObsidian(Material materialIn, String name) { super(materialIn, name); }
-	public BleedingObsidian(Material materialIn, String name, float hardness) { super(materialIn, name, hardness); }
+	public BleedingObsidian(String name) 
+	{ 
+		super(Material.ROCK, name); 
+	}
 	
 	@Override
 	public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) 

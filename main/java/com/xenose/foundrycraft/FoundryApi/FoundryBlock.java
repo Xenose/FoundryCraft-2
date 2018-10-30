@@ -15,32 +15,22 @@ import scala.xml.transform.RewriteRule;;
 
 public class FoundryBlock extends Block
 {
-
-	public FoundryBlock(Material materialIn) 
+	public FoundryBlock(String name) 
 	{
-		super(materialIn);
-		InitBlock(materialIn, "setNamePlzzz", 1);
+		super(Material.ROCK);
+		InitBlock(name);
 	}
 	
-	public FoundryBlock(Material materialIn, String name) 
+	public FoundryBlock(Material material,String name) 
 	{
-		super(materialIn);
-		InitBlock(materialIn, name, 1);
+		super(material);
+		InitBlock(name);
 	}
 	
-	public FoundryBlock(Material materialIn, String name, float hardness) 
-	{
-		super(materialIn);
-		InitBlock(materialIn, name, hardness);
-		
-	}
-	
-	private void InitBlock(Material materialIn, String name, float hardness) 
+	private void InitBlock(String name) 
 	{
 		this.setRegistryName(FoundryCraftData.id, name);
 		this.setUnlocalizedName(name);
-		SetHardness(hardness);
-		
 		this.setCreativeTab(getCreativeTabToDisplayOn().MISC);
 	}
 	

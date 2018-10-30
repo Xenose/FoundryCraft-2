@@ -5,9 +5,9 @@ import com.xenose.foundrycraft.FoundryApi.FoundryItem;
 
 import net.minecraft.item.ItemStack;
 
-public class FoundryCoolDust extends FoundryItem 
+public class CoalDust extends FoundryItem 
 {
-	public FoundryCoolDust(String name)
+	public CoalDust(String name)
 	{
 		super(name);
 	}

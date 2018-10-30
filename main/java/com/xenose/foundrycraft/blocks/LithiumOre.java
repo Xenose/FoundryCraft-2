@@ -16,16 +16,11 @@ import net.minecraft.world.World;
 public class LithiumOre extends FoundryOre 
 {
 
-	private int _explotionChance = 0;
+	private int _explotionChance = 16;
 	
-	public LithiumOre(Material materialIn) { super(materialIn); }
-	public LithiumOre(Material materialIn, String name) { super(materialIn, name); }
-	public LithiumOre(Material materialIn, String name, float hardness) { super(materialIn, name, hardness); }
-	
-	public LithiumOre(Material materialIn, String name, float hardness, int explotionChance) 
+	public LithiumOre(String name) 
 	{ 
-		super(materialIn, name, hardness); 
-		_explotionChance = explotionChance;
+		super(name); 
 	}
 	
 	@Override

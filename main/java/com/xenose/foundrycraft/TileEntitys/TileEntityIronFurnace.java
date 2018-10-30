@@ -3,14 +3,23 @@ package com.xenose.foundrycraft.TileEntitys;
 import com.xenose.foundrycraft.FoundryApi.FoundryTileEntity;
 import com.xenose.foundrycraft.crafting.Smelting;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.ITickable;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.ItemStackHelper;
+import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBoat;
+import net.minecraft.item.ItemDoor;
+import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
@@ -100,7 +109,7 @@ public class TileEntityIronFurnace extends FoundryTileEntity implements ITickabl
 	@Override
 	public String getName() 
 	{
-		return hasCustomName() ? _customName : "container.furnace";
+		return hasCustomName() ? _customName : "container.ironfurnace";
 	}
 	
 	@Override
@@ -289,8 +298,11 @@ public class TileEntityIronFurnace extends FoundryTileEntity implements ITickabl
 			
 			if (itemStack2.isEmpty()) 
 				invStack.set(2, itemstack1.copy());
+			
 			else if (itemStack2.getItem() == itemstack1.getItem())
 				itemStack2.grow(itemstack1.getCount());
+			
+			
 			if (itemStack.getItem() == Item.getItemFromBlock(Blocks.SPONGE) && itemStack.getMetadata() == 1 &&
 				!((ItemStack)invStack.get(1)).isEmpty() && ((ItemStack)invStack.get(1)).getItem() == Items.BUCKET)
 			{
@@ -303,13 +315,135 @@ public class TileEntityIronFurnace extends FoundryTileEntity implements ITickabl
 
 	
 
-	private int GetItemBurnTime(ItemStack itemStack) 
+	public static int GetItemBurnTime(ItemStack itemStack) 
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		if (itemStack.isEmpty()) 
+		{
+			return 0;
+		}
+		
+		else 
+		{
+			 int burnTime = net.minecraftforge.event.ForgeEventFactory.getItemBurnTime(itemStack);
+	            if (burnTime >= 0) return burnTime;
+	            Item item = itemStack.getItem();
+
+	            if (item == Item.getItemFromBlock(Blocks.WOODEN_SLAB))
+	            {
+	                return 150;
+	            }
+	            else if (item == Item.getItemFromBlock(Blocks.WOOL))
+	            {
+	                return 100;
+	            }
+	            else if (item == Item.getItemFromBlock(Blocks.CARPET))
+	            {
+	                return 67;
+	            }
+	            else if (item == Item.getItemFromBlock(Blocks.LADDER))
+	            {
+	                return 300;
+	            }
+	            else if (item == Item.getItemFromBlock(Blocks.WOODEN_BUTTON))
+	            {
+	                return 100;
+	            }
+	            else if (Block.getBlockFromItem(item).getDefaultState().getMaterial() == Material.WOOD)
+	            {
+	                return 300;
+	            }
+	            else if (item == Item.getItemFromBlock(Blocks.COAL_BLOCK))
+	            {
+	                return 16000;
+	            }
+	            else if (item instanceof ItemTool && "WOOD".equals(((ItemTool)item).getToolMaterialName()))
+	            {
+	                return 200;
+	            }
+	            else if (item instanceof ItemSword && "WOOD".equals(((ItemSword)item).getToolMaterialName()))
+	            {
+	                return 200;
+	            }
+	            else if (item instanceof ItemHoe && "WOOD".equals(((ItemHoe)item).getMaterialName()))
+	            {
+	                return 200;
+	            }
+	            else if (item == Items.STICK)
+	            {
+	                return 100;
+	            }
+	            else if (item != Items.BOW && item != Items.FISHING_ROD)
+	            {
+	                if (item == Items.SIGN)
+	                {
+	                    return 200;
+	                }
+	                else if (item == Items.COAL)
+	                {
+	                    return 1600;
+	                }
+	                else if (item == Items.LAVA_BUCKET)
+	                {
+	                    return 20000;
+	                }
+	                else if (item != Item.getItemFromBlock(Blocks.SAPLING) && item != Items.BOWL)
+	                {
+	                    if (item == Items.BLAZE_ROD)
+	                    {
+	                        return 2400;
+	                    }
+	                    else if (item instanceof ItemDoor && item != Items.IRON_DOOR)
+	                    {
+	                        return 200;
+	                    }
+	                    else
+	                    {
+	                        return item instanceof ItemBoat ? 400 : 0;
+	                    }
+	                }
+	                else
+	                {
+	                    return 100;
+	                }
+	            }
+	            else
+	            {
+	                return 300;
+	            }
+		}
 	}
 	
+	public static boolean IsItemFuel(ItemStack stack) 
+	{
+		return GetItemBurnTime(stack) > 0;
+	}
 	
+	@Override
+	public boolean isUsableByPlayer(EntityPlayer player) 
+	{
+		if (this.world.getTileEntity(this.pos) != this) 
+		{
+			return false;
+		}
+		else 
+		{
+			return player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
+		}
+	}
+	
+	@Override
+	public boolean isItemValidForSlot(int index, ItemStack stack) 
+	{
+		if(index == 2)
+			return false;
+		else if (index != 1)
+			return true;
+		else 
+		{
+			ItemStack itemStack = invStack.get(1);
+			return IsItemFuel(itemStack) || SlotFurnaceFuel.isBucket(stack) &&  itemStack.getItem() != Items.BUCKET;
+		}
+	}
 
 	@Override
 	public void tick() 
@@ -318,21 +452,108 @@ public class TileEntityIronFurnace extends FoundryTileEntity implements ITickabl
 	}
 
 	@Override
-	public int[] getSlotsForFace(EnumFacing side) {
-		// TODO Auto-generated method stub
-		return null;
+	public int[] getSlotsForFace(EnumFacing side) 
+	{
+		 if (side == EnumFacing.DOWN)
+	        {
+	            return _slotsBottom;
+	        }
+	        else
+	        {
+	            return side == EnumFacing.UP ? _slotsTop : _slotsSides;
+	        }
 	}
 
 	@Override
-	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction) 
+	{
+		return this.isItemValidForSlot(index, itemStackIn);
 	}
 
 	@Override
-	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) 
+	{
+		 if (direction == EnumFacing.DOWN && index == 1)
+	        {
+	            Item item = stack.getItem();
+
+	            if (item != Items.WATER_BUCKET && item != Items.BUCKET)
+	            {
+	                return false;
+	            }
+	        }
+
+	        return true;
 	}
+	
+	public String getGuiID()
+    {
+        return "xfc:ironfurnace";
+    }
+	 
+	 public int getField(int id)
+	 {
+        switch (id)
+        {
+            case 0:
+                return this._totalBurnTime;
+            case 1:
+                return this._currentBurnTime;
+            case 2:
+                return this._currentCookTime;
+            case 3:
+                return this._totalCookTime;
+            default:
+                return 0;
+        }
+	  }
+
+	    public void setField(int id, int value)
+	    {
+	        switch (id)
+	        {
+	            case 0:
+	                this._totalBurnTime = value;
+	                break;
+	            case 1:
+	                this._currentBurnTime = value;
+	                break;
+	            case 2:
+	                this._currentCookTime = value;
+	                break;
+	            case 3:
+	                this._totalCookTime = value;
+	        }
+	    }
+
+	    public int getFieldCount()
+	    {
+	        return 4;
+	    }
+
+	    public void clear()
+	    {
+	        this.invStack.clear();
+	    }
+
+	    net.minecraftforge.items.IItemHandler handlerTop = new net.minecraftforge.items.wrapper.SidedInvWrapper(this, net.minecraft.util.EnumFacing.UP);
+	    net.minecraftforge.items.IItemHandler handlerBottom = new net.minecraftforge.items.wrapper.SidedInvWrapper(this, net.minecraft.util.EnumFacing.DOWN);
+	    net.minecraftforge.items.IItemHandler handlerSide = new net.minecraftforge.items.wrapper.SidedInvWrapper(this, net.minecraft.util.EnumFacing.WEST);
+
+	    
+	    @SuppressWarnings("unchecked")
+	    @Override
+	    @javax.annotation.Nullable
+	    public <T> T getCapability(net.minecraftforge.common.capabilities.Capability<T> capability, @javax.annotation.Nullable net.minecraft.util.EnumFacing facing)
+	    {
+	        if (facing != null && capability == net.minecraftforge.items.CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+	            if (facing == EnumFacing.DOWN)
+	                return (T) handlerBottom;
+	            else if (facing == EnumFacing.UP)
+	                return (T) handlerTop;
+	            else
+	                return (T) handlerSide;
+	        return super.getCapability(capability, facing);
+	    }
 
 }
