@@ -4,8 +4,8 @@ import java.util.List;
 
 import com.xenose.foundrycraft.FoundryApi.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.FoundryItem;
+import com.xenose.foundrycraft.FoundryApi.FoundryOre;
 import com.xenose.foundrycraft.FoundryApi.FoundryWorldGen;
-import com.xenose.foundrycraft.blocks.FoundryOre;
 import com.xenose.foundrycraft.blocks.LithiumOre;
 
 import net.minecraft.block.material.Material;

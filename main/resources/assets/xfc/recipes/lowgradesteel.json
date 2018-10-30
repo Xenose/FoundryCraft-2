@@ -3,11 +3,13 @@
     
     "ingredients": [
         {
-            "item": "xfc:coaldust"
+            "type": "forge:ore_dict",
+            "ore": "dustCoal"
         },
         
         {
-            "item": "xfc:irondust"
+            "type": "forge:ore_dict",
+            "ore": "dustIron"
         }
     ],
     

@@ -37,6 +37,7 @@ item.lowgradesteeldust.name=Low Grade Steel Dust
 item.lowgradesteelingot.name=Low Grade Steel Ingot
 
 #Blocks
+tile.bleedingobsiden.name=Bleeding Obsiden
 tile.snowstone.name=Snow Stone
 tile.lamp.name=Lamp
 tile.clearglass.name=Clear Glass

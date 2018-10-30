@@ -2,6 +2,8 @@ package com.xenose.foundrycraft.blocks;
 
 import java.util.Random;
 
+import com.xenose.foundrycraft.FoundryApi.FoundryOre;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;

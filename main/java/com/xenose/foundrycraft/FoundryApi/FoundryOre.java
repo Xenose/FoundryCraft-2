@@ -1,6 +1,4 @@
-package com.xenose.foundrycraft.blocks;
-
-import com.xenose.foundrycraft.FoundryApi.FoundryBlock;
+package com.xenose.foundrycraft.FoundryApi;
 
 import net.minecraft.block.material.Material;
 
