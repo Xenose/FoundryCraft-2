@@ -11,11 +11,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 
-public class BleedingObsiden extends FoundryBlock
+public class BleedingObsidian extends FoundryBlock
 {
-	public BleedingObsiden(Material materialIn) { super(materialIn); }
-	public BleedingObsiden(Material materialIn, String name) { super(materialIn, name); }
-	public BleedingObsiden(Material materialIn, String name, float hardness) { super(materialIn, name, hardness); }
+	public BleedingObsidian(Material materialIn) { super(materialIn); }
+	public BleedingObsidian(Material materialIn, String name) { super(materialIn, name); }
+	public BleedingObsidian(Material materialIn, String name, float hardness) { super(materialIn, name, hardness); }
 	
 	@Override
 	public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) 

@@ -9,7 +9,7 @@ import com.xenose.foundrycraft.FoundryApi.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.FoundryItem;
 import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
 import com.xenose.foundrycraft.MetalTypes.Metal;
-import com.xenose.foundrycraft.blocks.BleedingObsiden;
+import com.xenose.foundrycraft.blocks.BleedingObsidian;
 import com.xenose.foundrycraft.blocks.FoundryGlass;
 import com.xenose.foundrycraft.blocks.FoundryLamp;
 import com.xenose.foundrycraft.items.FoundryCoolDust;
@@ -48,7 +48,7 @@ public class AddObjects
 	public static final FoundryBlock snowstone = new FoundryBlock(Material.ROCK, "snowstone", 1);
 	public static final FoundryLamp lamp = new FoundryLamp(Material.GLASS, "lamp", 2);
 	public static final FoundryGlass clearglass = new FoundryGlass(Material.GLASS, "clearglass", 1);
-	public static final BleedingObsiden bleedingobsiden = new BleedingObsiden(Material.ROCK, "bleedingobsiden" , 40);
+	public static final BleedingObsidian bleedingobsidian = new BleedingObsidian(Material.ROCK, "bleedingobsidian" , 40);
 	
 	
 	private static List<FoundryItem> itemList;
@@ -98,7 +98,7 @@ public class AddObjects
 		blockList.add(snowstone);
 		blockList.add(lamp);
 		blockList.add(clearglass);
-		blockList.add(bleedingobsiden);
+		blockList.add(bleedingobsidian);
 	}
 
 }
