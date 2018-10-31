@@ -23,7 +23,7 @@ public class FoundryOre extends FoundryBlock
 		_chance = chance;
 	}
 	
-	public void SetSpawnSize(int max, int min) 
+	public void SetSpawnSize(int min, int max) 
 	{
 		_size = max;
 		_minSize = min;

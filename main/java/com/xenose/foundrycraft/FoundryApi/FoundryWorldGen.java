@@ -49,6 +49,8 @@ public class FoundryWorldGen implements IWorldGenerator
 	
 	private void WorldGen(IBlockState ore, World world, Random random, BlockPos pos, int deltaHeight, int clusterSize, int chance)
 	{
+		//System.out.println("\n\n\n World Gen valuse <=========== \n" + ore +"\n" + world +"\n" + random +"\n" + deltaHeight + "\n" + clusterSize + "\n" + chance + "\n\n");
+		
 		for (int i = 0; i < chance; i++) 
 		{
 			BlockPos tmpPos = new BlockPos(pos.getX() + random.nextInt(16), pos.getY() + random.nextInt(deltaHeight), pos.getZ() + random.nextInt(16));

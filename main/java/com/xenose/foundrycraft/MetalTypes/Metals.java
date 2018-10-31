@@ -2,6 +2,9 @@ package com.xenose.foundrycraft.MetalTypes;
 
 import java.util.List;
 
+import scala.collection.mutable.Cloneable;
+import scala.tools.nsc.backend.icode.analysis.TypeFlowAnalysis.MTFAGrowable;
+
 import com.xenose.foundrycraft.FoundryApi.FoundryItem;
 import com.xenose.foundrycraft.FoundryApi.FoundryWorldGen;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
@@ -9,6 +12,7 @@ import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
 import com.xenose.foundrycraft.blocks.LithiumOre;
 
 import net.minecraft.block.material.Material;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class Metals 
 {
@@ -18,46 +22,36 @@ public class Metals
 	FoundryOre _ore = null;
 	FoundryBlock _block = null;
 	
-	public Metals(String name, float hardness) 
+	public Metals(Metal metal)
 	{
-		Init(name, hardness, 20, 10, 20, 1, 100);
-	}
-	
-	public Metals(String name, float hardness, int worldSpawnChance, int minSpawnSize, int maxSpawnSize)
-	{
-		Init(name, hardness, worldSpawnChance, minSpawnSize, maxSpawnSize, 1, 100);
-	}
-	
-	public Metals(String name, float hardness, int worldSpawnChance, int minSpawnSize, int maxSpawnSize, int minHeight, int maxHeight) 
-	{
-		Init(name, hardness, worldSpawnChance, minSpawnSize, maxSpawnSize, minHeight, maxHeight);
-	}
-	
-	private void Init(String name, float hardness, int worldSpawnChance, int minSpawnSize, int maxSpawnSize, int minHeight, int maxHeight) 
-	{
-		_ingot = new FoundryItem(name + "ingot");
-		_dust = new FoundryItem(name + "dust");
+		_ingot = new FoundryItem(metal.GetName() + "ingot");
+		_dust = new FoundryItem(metal.GetName() + "dust");
+		_block = new FoundryBlock(Material.IRON, metal.GetName() + "block");
 		
-		if (name != "lithium")
+		_block.SetHardness(metal.GetHardness());
+		
+		if (metal.GetHasOre()) 
 		{
-			_ore = new FoundryOre(name + "ore");
+			switch (metal.GetName()) 
+			{
+				case "lithium":
+					_ore = new LithiumOre(metal.GetName() + "ore");
+					break;
+				default:
+					_ore = new FoundryOre(metal.GetName() + "ore");
+					break;
+			}
+			
+			_ore.SetHardness(metal.GetHardness());
+			
+			_ore.SetSpawnChance(metal.GetSpawnChance());
+			_ore.SetMinMaxHight(metal.GetMinSpawnHight(), metal.GetMaxSpawnHight());
+			_ore.SetSpawnSize(metal.GetMinSpawnSize(), metal.GetMaxSpawnSize());
+			
+			if (_ore != null)
+				FoundryWorldGen.oreGenList_overWolrd.add(_ore);
 		}
-		else 
-		{
-			_ore = new LithiumOre(name + "ore");
-		}
 		
-		_block = new FoundryBlock(Material.IRON, name + "block");
-		
-		_block.SetHardness(hardness);
-		_ore.SetHardness(hardness);
-		
-		_ore.SetSpawnChance(worldSpawnChance);
-		_ore.SetSpawnSize(maxSpawnSize, minSpawnSize);		
-		_ore.SetMinMaxHight(minHeight, maxHeight);
-		
-		if (_ore != null)
-			FoundryWorldGen.oreGenList_overWolrd.add(_ore);
 	}
 	
 	public final FoundryItem GetDust() { return _dust; }
@@ -70,9 +64,10 @@ public class Metals
 	{
 		itemList.add(_dust);
 		itemList.add(_ingot);
-		
-		blockList.add(_ore);
 		blockList.add(_block);
+		
+		if (_ore != null)
+			blockList.add(_ore);
 	}
 
 }

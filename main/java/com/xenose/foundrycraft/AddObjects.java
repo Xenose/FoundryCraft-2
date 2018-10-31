@@ -2,12 +2,15 @@ package com.xenose.foundrycraft;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeMap;
 
 import javax.swing.plaf.metal.MetalScrollBarUI;
 
 import com.xenose.foundrycraft.FoundryApi.FoundryItem;
 import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
+import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
+import com.xenose.foundrycraft.MetalTypes.Metal;
 import com.xenose.foundrycraft.MetalTypes.Metals;
 import com.xenose.foundrycraft.blocks.BleedingObsidian;
 import com.xenose.foundrycraft.blocks.ClearGlass;
@@ -17,34 +20,43 @@ import com.xenose.foundrycraft.items.CoalDust;
 
 import net.minecraft.block.material.Material;
 
+
+
 public class AddObjects 
 {	
-	public static final FoundryItem lowgradesteelingot = new FoundryItem("lowgradesteelingot");
-	public static final FoundryItem highgradesteelingot = new FoundryItem("highgradesteelingot");
 	
-	public static final FoundryItem lowgradesteeldust = new FoundryItem("lowgradesteeldust");
-	public static final FoundryItem highgradesteeldust = new FoundryItem("highgradesteeldust");
 	
-	public static final FoundryBlock lowgradesteelblock = new FoundryBlock(Material.IRON, "lowgradesteelblock");
-	public static final FoundryBlock highgradesteelblock = new FoundryBlock(Material.IRON, "highgradesteelblock");
+	private final static Metal metals[] = {
+					//name	Hardness/hasOre/spawnChance/Hight[min,max]/spawnsize[min,max]
+			new Metal("aluminium", 	4, 	true, 	18, 	60, 70, 	3, 7),
+			new Metal("cobalt", 	20, true, 	20, 	3, 5, 		1, 10),
+			new Metal("copper", 	4, 	true, 	10, 	40, 60, 	3, 8),
+			
+			new Metal("lead", 		16, true,   5,		20, 60,		2, 7),
+			new Metal("lithium", 	3, 	true, 	4, 		50, 100, 	5, 15),
+			new Metal("magnesium", 	16, true),
+			
+			new Metal("nickel", 	16, true),
+			new Metal("platinum", 	20, true, 	40, 	0, 2, 		1, 2),
+			new Metal("silver", 	16, true),
+			
+			new Metal("tin", 		16, true),
+			new Metal("titanium", 	16, true),
+			new Metal("tungsten", 	16, true),
+			
+			new Metal("uranium", 	16, true),
+			new Metal("zinc", 		16, true),
+			
+			new Metal("lowgradesteel", 16, false),
+			new Metal("highgradesteel", 16, false)
+	};
+	
+	public static TreeMap<String, Metals> metalList = new TreeMap<>();
 	
 	public static final FoundryItem irondust = new FoundryItem("irondust");
 	public static final CoalDust coaldust = new CoalDust("coaldust");
 	
-	public static final Metals aluminium = new Metals("aluminium", 4, 18, 2, 5, 60, 150);
-	public static final Metals cobalt = new Metals("cobalt", 20, 20, 3, 5, 1, 10);
-	public static final Metals copper = new Metals("copper", 4, 10, 2, 7, 50, 60 );
-	public static final Metals lead = new Metals("lead", 16);
-	public static final Metals lithium = new Metals("lithium", 3, 10, 10, 25);
-	public static final Metals magnesium = new Metals("magnesium", 16);
-	public static final Metals nickel = new Metals("nickel", 16);
-	public static final Metals platinum = new Metals("platinum", 20, 40, 1, 2, 0, 1);
-	public static final Metals silver = new Metals("silver", 16);
-	public static final Metals tin = new Metals("tin", 16);
-	public static final Metals titanium = new Metals("titanium", 16);
-	public static final Metals tungsten = new Metals("tungsten", 16);
-	public static final Metals uranium = new Metals("uranium", 16);
-	public static final Metals zinc = new Metals("zinc", 16);
+	
 	
 	public static final FoundryBlock snowstone = new FoundryBlock("snowstone");
 	public static final Lamp lamp = new Lamp("lamp");
@@ -58,6 +70,11 @@ public class AddObjects
 	
 	public static void Init() 
 	{
+		for (int i = 0; i < metals.length; i++) 
+		{
+			metalList.put(metals[i].GetName(), new Metals(metals[i]));
+		}
+		
 		itemList = new ArrayList<FoundryItem>();
 		blockList = new ArrayList<FoundryBlock>();
 		
@@ -77,6 +94,11 @@ public class AddObjects
 	
 	private static void AddElements() 
 	{
+		for (int i = 0; i < metals.length; i++) 
+		{
+			metalList.get(metals[i].GetName()).AddToList(itemList, blockList);
+		}
+		/*
 		aluminium.AddToList(itemList, blockList);
 		cobalt.AddToList(itemList, blockList);
 		copper.AddToList(itemList, blockList);
@@ -90,13 +112,14 @@ public class AddObjects
 		titanium.AddToList(itemList, blockList);
 		tungsten.AddToList(itemList, blockList);
 		uranium.AddToList(itemList, blockList);
-		zinc.AddToList(itemList, blockList);	
+		zinc.AddToList(itemList, blockList);
+		
+		lowgradesteel.AddToList(itemList, blockList);
+		*/
 		
 		itemList.add(coaldust);
 		itemList.add(irondust);
 		
-		itemList.add(lowgradesteeldust);
-		itemList.add(lowgradesteelingot);
 		
 		blockList.add(snowstone);
 		blockList.add(lamp);

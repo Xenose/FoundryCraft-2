@@ -12,22 +12,37 @@ public class Smelting {
 	
 	public static void Init() 
 	{
-		AddSmeltingRecipe(AddObjects.aluminium.GetOre(), new ItemStack(AddObjects.aluminium.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.cobalt.GetOre(), new ItemStack(AddObjects.cobalt.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.copper.GetOre(), new ItemStack(AddObjects.copper.GetIngot(), 1), 0.2f);
-		AddSmeltingRecipe(AddObjects.lead.GetOre(), new ItemStack(AddObjects.lead.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.lithium.GetOre(), new ItemStack(AddObjects.lithium.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.magnesium.GetOre(), new ItemStack(AddObjects.magnesium.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.nickel.GetOre(), new ItemStack(AddObjects.nickel.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.platinum.GetOre(), new ItemStack(AddObjects.platinum.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.silver.GetOre(), new ItemStack(AddObjects.silver.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.tin.GetOre(), new ItemStack(AddObjects.tin.GetIngot(), 1), 0.1f);
-		AddSmeltingRecipe(AddObjects.titanium.GetOre(), new ItemStack(AddObjects.titanium.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.tungsten.GetOre(), new ItemStack(AddObjects.tungsten.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.uranium.GetOre(), new ItemStack(AddObjects.uranium.GetIngot(), 1), 10);
-		AddSmeltingRecipe(AddObjects.zinc.GetOre(), new ItemStack(AddObjects.zinc.GetIngot(), 1), 10);
+		AddSmeltingRecipe(AddObjects.metalList.get("aluminium").GetOre(), 	new ItemStack(AddObjects.metalList.get("aluminium").GetIngot(), 1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("cobalt").GetOre(), 		new ItemStack(AddObjects.metalList.get("cobalt").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("copper").GetOre(), 		new ItemStack(AddObjects.metalList.get("copper").GetIngot(), 	1), 	0.2f);
+		AddSmeltingRecipe(AddObjects.metalList.get("lead").GetOre(), 		new ItemStack(AddObjects.metalList.get("lead").GetIngot(), 		1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("lithium").GetOre(), 	new ItemStack(AddObjects.metalList.get("lithium").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("magnesium").GetOre(), 	new ItemStack(AddObjects.metalList.get("magnesium").GetIngot(), 1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("nickel").GetOre(), 		new ItemStack(AddObjects.metalList.get("nickel").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("platinum").GetOre(), 	new ItemStack(AddObjects.metalList.get("platinum").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("silver").GetOre(), 		new ItemStack(AddObjects.metalList.get("silver").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("tin").GetOre(), 		new ItemStack(AddObjects.metalList.get("tin").GetIngot(), 		1), 	0.1f);
+		AddSmeltingRecipe(AddObjects.metalList.get("titanium").GetOre(), 	new ItemStack(AddObjects.metalList.get("titanium").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("tungsten").GetOre(), 	new ItemStack(AddObjects.metalList.get("tungsten").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("uranium").GetOre(), 	new ItemStack(AddObjects.metalList.get("uranium").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("zinc").GetOre(), 		new ItemStack(AddObjects.metalList.get("zinc").GetIngot(), 		1), 	10);
 		
-		AddSmeltingRecipe(AddObjects.lowgradesteeldust, new ItemStack(AddObjects.lowgradesteelingot, 1),  2);
+		AddSmeltingRecipe(AddObjects.metalList.get("aluminium").GetDust(), 	new ItemStack(AddObjects.metalList.get("aluminium").GetIngot(), 1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("cobalt").GetDust(), 	new ItemStack(AddObjects.metalList.get("cobalt").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("copper").GetDust(), 	new ItemStack(AddObjects.metalList.get("copper").GetIngot(), 	1), 	0.2f);
+		AddSmeltingRecipe(AddObjects.metalList.get("lead").GetDust(), 		new ItemStack(AddObjects.metalList.get("lead").GetIngot(), 		1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("lithium").GetDust(), 	new ItemStack(AddObjects.metalList.get("lithium").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("magnesium").GetDust(), 	new ItemStack(AddObjects.metalList.get("magnesium").GetIngot(), 1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("nickel").GetDust(), 	new ItemStack(AddObjects.metalList.get("nickel").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("platinum").GetDust(), 	new ItemStack(AddObjects.metalList.get("platinum").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("silver").GetDust(), 	new ItemStack(AddObjects.metalList.get("silver").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("tin").GetDust(), 		new ItemStack(AddObjects.metalList.get("tin").GetIngot(), 		1), 	0.1f);
+		AddSmeltingRecipe(AddObjects.metalList.get("titanium").GetDust(), 	new ItemStack(AddObjects.metalList.get("titanium").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("tungsten").GetDust(), 	new ItemStack(AddObjects.metalList.get("tungsten").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("uranium").GetDust(), 	new ItemStack(AddObjects.metalList.get("uranium").GetIngot(), 	1), 	10);
+		AddSmeltingRecipe(AddObjects.metalList.get("zinc").GetDust(), 		new ItemStack(AddObjects.metalList.get("zinc").GetIngot(), 		1), 	10);
+		
+		AddSmeltingRecipe(AddObjects.metalList.get("lowgradesteel").GetDust(), new ItemStack(AddObjects.metalList.get("lowgradesteel").GetIngot(), 1),  2);
 		
 		AddSmeltingRecipe(Blocks.GLASS, new ItemStack(AddObjects.clearglass), 0);
 	}

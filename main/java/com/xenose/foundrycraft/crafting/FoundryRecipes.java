@@ -17,22 +17,22 @@ public class FoundryRecipes
 	{	
 		Smelting.Init();
 		
-		AddBasicMetalRecipes(AddObjects.aluminium.GetBlock(), AddObjects.aluminium.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.cobalt.GetBlock(), AddObjects.cobalt.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.copper.GetBlock(), AddObjects.copper.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.lead.GetBlock(), AddObjects.lead.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.lithium.GetBlock(), AddObjects.lithium.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.magnesium.GetBlock(), AddObjects.magnesium.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.nickel.GetBlock(), AddObjects.nickel.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.platinum.GetBlock(), AddObjects.platinum.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.silver.GetBlock(), AddObjects.silver.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.tin.GetBlock(), AddObjects.tin.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.titanium.GetBlock(), AddObjects.titanium.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.tungsten.GetBlock(), AddObjects.tungsten.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.uranium.GetBlock(), AddObjects.uranium.GetIngot(), 9);
-		AddBasicMetalRecipes(AddObjects.zinc.GetBlock(), AddObjects.zinc.GetIngot(), 9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("aluminium").GetBlock(), 	AddObjects.metalList.get("aluminium").GetIngot(), 	9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("cobalt").GetBlock(), 	AddObjects.metalList.get("cobalt").GetIngot(), 		9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("copper").GetBlock(), 	AddObjects.metalList.get("copper").GetIngot(), 		9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("lead").GetBlock(), 		AddObjects.metalList.get("lead").GetIngot(), 		9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("lithium").GetBlock(), 	AddObjects.metalList.get("lithium").GetIngot(), 	9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("magnesium").GetBlock(), 	AddObjects.metalList.get("magnesium").GetIngot(), 	9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("nickel").GetBlock(), 	AddObjects.metalList.get("nickel").GetIngot(), 		9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("platinum").GetBlock(), 	AddObjects.metalList.get("platinum").GetIngot(), 	9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("silver").GetBlock(), 	AddObjects.metalList.get("silver").GetIngot(), 		9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("tin").GetBlock(), 		AddObjects.metalList.get("tin").GetIngot(), 		9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("titanium").GetBlock(), 	AddObjects.metalList.get("titanium").GetIngot(), 	9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("tungsten").GetBlock(), 	AddObjects.metalList.get("tungsten").GetIngot(), 	9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("uranium").GetBlock(), 	AddObjects.metalList.get("uranium").GetIngot(), 	9);
+		AddBasicMetalRecipes(AddObjects.metalList.get("zinc").GetBlock(), 		AddObjects.metalList.get("zinc").GetIngot(), 		9);
 		
-		//AddBlockRecipe(AddObjects.lowgradesteelblock, AddObjects.lowgradesteelingot, 9);
+		AddBlockRecipe(AddObjects.metalList.get("lowgradesteel").GetBlock(), AddObjects.metalList.get("lowgradesteel").GetIngot(), 9);
 	}
 	
 	private static void AddBasicMetalRecipes(Block output, Item input, int size) 
