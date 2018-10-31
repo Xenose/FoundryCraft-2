@@ -10,6 +10,7 @@ import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
 import com.xenose.foundrycraft.FoundryApi.items.FoundryItem;
+import com.xenose.foundrycraft.FoundryApi.items.tools.BedrockRemovelTool;
 import com.xenose.foundrycraft.FoundryApi.items.tools.FoundryPickaxe;
 import com.xenose.foundrycraft.MetalTypes.Metal;
 import com.xenose.foundrycraft.MetalTypes.Metals;
@@ -57,6 +58,8 @@ public class AddObjects
 	public static final FoundryItem irondust = new FoundryItem("irondust");
 	public static final CoalDust coaldust = new CoalDust("coaldust");
 	
+	public static final BedrockRemovelTool bedrockremoveltool = new BedrockRemovelTool("bedrockremoveltool");
+	
 	public static final FoundryPickaxe tungstenpickaxe = new FoundryPickaxe("tungstenpickaxe", 2,2);
 	
 	public static final FoundryBlock snowstone = new FoundryBlock("snowstone");
@@ -102,6 +105,7 @@ public class AddObjects
 		
 		itemList.add(coaldust);
 		itemList.add(irondust);
+		itemList.add(bedrockremoveltool);
 		itemList.add(tungstenpickaxe);
 		
 		blockList.add(snowstone);
