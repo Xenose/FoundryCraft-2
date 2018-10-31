@@ -27,8 +27,6 @@ public class Metal {
 		SetHardness(hardness);
 		SetHasOre(hasOre);
 		
-		
-		
 		SetSpawnChance(20);
 		SetSpawnHight(10, 100);
 		SetSpawnSize(3, 30);

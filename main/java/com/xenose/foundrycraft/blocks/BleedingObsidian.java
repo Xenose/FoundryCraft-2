@@ -16,7 +16,8 @@ public class BleedingObsidian extends FoundryBlock
 {
 	public BleedingObsidian(String name) 
 	{ 
-		super(Material.ROCK, name); 
+		super(Material.ROCK, name);
+		setHarvestLevel("pickaxe", 3);
 		setSoundType(SoundType.STONE);
 	}
 	
