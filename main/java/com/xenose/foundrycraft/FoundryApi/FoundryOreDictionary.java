@@ -11,6 +11,8 @@ public class FoundryOreDictionary {
 		OreDictionary.registerOre("dustCoal", AddObjects.coaldust);
 		OreDictionary.registerOre("dustIron", AddObjects.irondust);
 		
+		OreDictionary.registerOre("dustSteel", 		AddObjects.metalList.get("highgradesteel").GetDust());
+		
 		OreDictionary.registerOre("dustAluminium", 	AddObjects.metalList.get("aluminium").GetDust());
 		OreDictionary.registerOre("dustCobalt", 	AddObjects.metalList.get("cobalt").GetDust());
 		OreDictionary.registerOre("dustCopper", 	AddObjects.metalList.get("copper").GetDust());
@@ -26,7 +28,7 @@ public class FoundryOreDictionary {
 		OreDictionary.registerOre("dustUranium", 	AddObjects.metalList.get("uranium").GetDust());
 		OreDictionary.registerOre("dustZinc", 		AddObjects.metalList.get("zinc").GetDust());
 		
-		OreDictionary.registerOre("ingotSteel", 	AddObjects.metalList.get("lowgradesteel").GetIngot());
+		OreDictionary.registerOre("ingotSteel", 	AddObjects.metalList.get("highgradesteel").GetIngot());
 		
 		OreDictionary.registerOre("ingotAluminium", AddObjects.metalList.get("aluminium").GetIngot());
 		OreDictionary.registerOre("ingotCobalt", 	AddObjects.metalList.get("cobalt").GetIngot());

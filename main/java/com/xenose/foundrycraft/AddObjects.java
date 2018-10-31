@@ -29,23 +29,23 @@ public class AddObjects
 	private final static Metal metals[] = {
 					//name	Hardness/hasOre/spawnChance/Hight[min,max]/spawnsize[min,max]
 			new Metal("aluminium", 	4, 	true, 	18, 	60, 70, 	3, 7),
-			new Metal("cobalt", 	20, true, 	20, 	3, 5, 		1, 10),
+			new Metal("cobalt", 	20, true, 	20, 	1, 10, 		1, 3),
 			new Metal("copper", 	4, 	true, 	10, 	40, 60, 	3, 8),
 			
 			new Metal("lead", 		16, true,   5,		20, 60,		2, 7),
 			new Metal("lithium", 	3, 	true, 	4, 		50, 100, 	5, 15),
-			new Metal("magnesium", 	16, true),
+			new Metal("magnesium", 	16, true,	10,		35, 45,		1, 5),
 			
-			new Metal("nickel", 	16, true),
-			new Metal("platinum", 	20, true, 	40, 	0, 2, 		1, 2),
-			new Metal("silver", 	16, true),
+			new Metal("nickel", 	16, true,	10,		1, 35,		2, 4),
+			new Metal("platinum", 	20, true, 	20, 	1, 4, 		1, 2),
+			new Metal("silver", 	16, true,	6,		1, 20,		1, 5),
 			
-			new Metal("tin", 		16, true),
-			new Metal("titanium", 	16, true),
-			new Metal("tungsten", 	16, true),
+			new Metal("tin", 		16, true,	2,		20, 40,		4, 9),
+			new Metal("titanium", 	16, true,	10,		1, 6,		5, 10),
+			new Metal("tungsten", 	16, true,	10,		20, 25,		2, 4),
 			
-			new Metal("uranium", 	16, true),
-			new Metal("zinc", 		16, true),
+			new Metal("uranium", 	16, true,	15,		10,	50,		1, 3),
+			new Metal("zinc", 		16, true,	20,		70, 100,	4, 10),
 			
 			new Metal("lowgradesteel", 16, false),
 			new Metal("highgradesteel", 16, false)
