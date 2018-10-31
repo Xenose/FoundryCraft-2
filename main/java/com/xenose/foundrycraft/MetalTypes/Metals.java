@@ -5,10 +5,10 @@ import java.util.List;
 import scala.collection.mutable.Cloneable;
 import scala.tools.nsc.backend.icode.analysis.TypeFlowAnalysis.MTFAGrowable;
 
-import com.xenose.foundrycraft.FoundryApi.FoundryItem;
 import com.xenose.foundrycraft.FoundryApi.FoundryWorldGen;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
+import com.xenose.foundrycraft.FoundryApi.items.FoundryItem;
 import com.xenose.foundrycraft.blocks.LithiumOre;
 
 import net.minecraft.block.material.Material;
@@ -43,6 +43,7 @@ public class Metals
 			}
 			
 			_ore.SetHardness(metal.GetHardness());
+			_ore.SetHarvestLevel(metal.GetHarvestLevel());
 			
 			_ore.SetSpawnChance(metal.GetSpawnChance());
 			_ore.SetMinMaxHight(metal.GetMinSpawnHight(), metal.GetMaxSpawnHight());

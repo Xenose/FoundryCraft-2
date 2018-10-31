@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "xfc:ironfurnace" },
+        "facing=south": { "model": "xfc:ironfurnace", "y": 180 },
+        "facing=west":  { "model": "xfc:ironfurnace", "y": 270 },
+        "facing=east":  { "model": "xfc:ironfurnace", "y": 90 }
+    }
+}

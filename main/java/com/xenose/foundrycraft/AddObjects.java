@@ -6,10 +6,11 @@ import java.util.TreeMap;
 
 import javax.swing.plaf.metal.MetalScrollBarUI;
 
-import com.xenose.foundrycraft.FoundryApi.FoundryItem;
 import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
+import com.xenose.foundrycraft.FoundryApi.items.FoundryItem;
+import com.xenose.foundrycraft.FoundryApi.items.tools.FoundryPickaxe;
 import com.xenose.foundrycraft.MetalTypes.Metal;
 import com.xenose.foundrycraft.MetalTypes.Metals;
 import com.xenose.foundrycraft.blocks.BleedingObsidian;
@@ -28,27 +29,27 @@ public class AddObjects
 	
 	private final static Metal metals[] = {
 					//name	Hardness/hasOre/spawnChance/Hight[min,max]/spawnsize[min,max]
-			new Metal("aluminium", 	4, 	true, 	18, 	60, 70, 	3, 7),
-			new Metal("cobalt", 	20, true, 	20, 	1, 10, 		1, 3),
-			new Metal("copper", 	4, 	true, 	10, 	40, 60, 	3, 8),
+			new Metal("aluminium",  1, 4,  true, 	18, 	60, 70, 	3, 7),
+			new Metal("cobalt", 	5, 20, true, 	20, 	1, 10, 		1, 3),
+			new Metal("copper", 	2, 4,  true, 	10, 	40, 60, 	3, 8),
 			
-			new Metal("lead", 		16, true,   5,		20, 60,		2, 7),
-			new Metal("lithium", 	3, 	true, 	4, 		50, 100, 	5, 15),
-			new Metal("magnesium", 	16, true,	10,		35, 45,		1, 5),
+			new Metal("lead", 		3, 16, true,    5,		20, 60,		2, 7),
+			new Metal("lithium", 	2, 3,  true, 	4, 		50, 100, 	5, 15),
+			new Metal("magnesium", 	2, 16, true,	10,		35, 45,		1, 5),
 			
-			new Metal("nickel", 	16, true,	10,		1, 35,		2, 4),
-			new Metal("platinum", 	20, true, 	20, 	1, 4, 		1, 2),
-			new Metal("silver", 	16, true,	6,		1, 20,		1, 5),
+			new Metal("nickel", 	2, 16, true,	10,		1, 35,		2, 4),
+			new Metal("platinum", 	4, 20, true, 	20, 	1, 4, 		1, 2),
+			new Metal("silver", 	3, 16, true,	6,		1, 20,		1, 5),
 			
-			new Metal("tin", 		16, true,	2,		20, 40,		4, 9),
-			new Metal("titanium", 	16, true,	10,		1, 6,		5, 10),
-			new Metal("tungsten", 	16, true,	10,		20, 25,		2, 4),
+			new Metal("tin", 		2, 16, true,	2,		20, 40,		4, 9),
+			new Metal("titanium", 	5, 16, true,	10,		1, 6,		5, 10),
+			new Metal("tungsten", 	6, 16, true,	10,		20, 25,		2, 4),
 			
-			new Metal("uranium", 	16, true,	15,		10,	50,		1, 3),
-			new Metal("zinc", 		16, true,	20,		70, 100,	4, 10),
+			new Metal("uranium", 	4, 16, true,	15,		10,	50,		1, 3),
+			new Metal("zinc", 		3, 16, true,	20,		70, 100,	4, 10),
 			
-			new Metal("lowgradesteel", 16, false),
-			new Metal("highgradesteel", 16, false)
+			new Metal("lowgradesteel", 	2, 16, false),
+			new Metal("highgradesteel", 4, 16, false)
 	};
 	
 	public static TreeMap<String, Metals> metalList = new TreeMap<>();
@@ -56,7 +57,7 @@ public class AddObjects
 	public static final FoundryItem irondust = new FoundryItem("irondust");
 	public static final CoalDust coaldust = new CoalDust("coaldust");
 	
-	
+	public static final FoundryPickaxe tungstenpickaxe = new FoundryPickaxe("tungstenpickaxe", 2,2);
 	
 	public static final FoundryBlock snowstone = new FoundryBlock("snowstone");
 	public static final Lamp lamp = new Lamp("lamp");
@@ -98,28 +99,10 @@ public class AddObjects
 		{
 			metalList.get(metals[i].GetName()).AddToList(itemList, blockList);
 		}
-		/*
-		aluminium.AddToList(itemList, blockList);
-		cobalt.AddToList(itemList, blockList);
-		copper.AddToList(itemList, blockList);
-		lead.AddToList(itemList, blockList);
-		lithium.AddToList(itemList, blockList);
-		magnesium.AddToList(itemList, blockList);
-		nickel.AddToList(itemList, blockList);
-		platinum.AddToList(itemList, blockList);
-		silver.AddToList(itemList, blockList);
-		tin.AddToList(itemList, blockList);
-		titanium.AddToList(itemList, blockList);
-		tungsten.AddToList(itemList, blockList);
-		uranium.AddToList(itemList, blockList);
-		zinc.AddToList(itemList, blockList);
-		
-		lowgradesteel.AddToList(itemList, blockList);
-		*/
 		
 		itemList.add(coaldust);
 		itemList.add(irondust);
-		
+		itemList.add(tungstenpickaxe);
 		
 		blockList.add(snowstone);
 		blockList.add(lamp);

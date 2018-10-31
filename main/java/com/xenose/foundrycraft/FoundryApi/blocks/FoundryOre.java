@@ -18,6 +18,11 @@ public class FoundryOre extends FoundryBlock
 		SetSoundType(SoundType.STONE);
 	}
 	
+	public void SetHarvestLevel(int level) 
+	{
+		setHarvestLevel("pickaxe", level);
+	}
+	
 	public void SetSpawnChance(int chance) 
 	{
 		_chance = chance;

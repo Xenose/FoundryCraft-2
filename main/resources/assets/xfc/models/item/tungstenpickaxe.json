@@ -1,0 +1,4 @@
+{ 
+    "parent": "item/handheld", 
+    "textures": { "layer0": "xfc:items/tools/pickaxe/tungstenpickaxe" }
+}

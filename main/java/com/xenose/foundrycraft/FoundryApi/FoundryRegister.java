@@ -1,6 +1,7 @@
 package com.xenose.foundrycraft.FoundryApi;
 
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
+import com.xenose.foundrycraft.FoundryApi.items.FoundryItem;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;

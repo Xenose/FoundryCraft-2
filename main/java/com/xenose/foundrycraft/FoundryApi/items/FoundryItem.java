@@ -1,4 +1,4 @@
-package com.xenose.foundrycraft.FoundryApi;
+package com.xenose.foundrycraft.FoundryApi.items;
 
 import com.xenose.foundrycraft.FoundryCraft;
 import com.xenose.foundrycraft.FoundryCraftData;

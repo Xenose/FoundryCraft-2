@@ -1,0 +1,14 @@
+{
+    "parent": "block/orientable",
+    
+    "textures": 
+    {
+        "particle": "xfc:blocks/machines/ironfurnace/ironfurnaceoff",
+        "down": "xfc:blocks/machines/ironfurnace/ironfurnaceoff",
+        "top": "xfc:blocks/machines/ironfurnace/ironfurnaceoff",
+        "front": "xfc:blocks/machines/ironfurnace/ironfurnaceoff",
+        "east": "xfc:blocks/machines/ironfurnace/ironfurnaceoff",     
+        "west": "xfc:blocks/machines/ironfurnace/ironfurnaceoff",
+        "south": "xfc:blocks/machines/ironfurnace/ironfurnaceoff"
+    }
+}

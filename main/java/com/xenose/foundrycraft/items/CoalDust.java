@@ -1,7 +1,7 @@
 package com.xenose.foundrycraft.items;
 
 import com.xenose.foundrycraft.FoundryCraftData;
-import com.xenose.foundrycraft.FoundryApi.FoundryItem;
+import com.xenose.foundrycraft.FoundryApi.items.FoundryItem;
 
 import net.minecraft.item.ItemStack;
 

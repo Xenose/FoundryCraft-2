@@ -8,6 +8,7 @@ import com.xenose.foundrycraft.blocks.LithiumOre;
 public class Metal {
 	
 	private String _name;
+	private int _harvestLevel;
 	private float _hardness;
 	private boolean _hasOre;
 	
@@ -19,20 +20,24 @@ public class Metal {
 	
 	public Metal() {}
 	
-	public Metal(String name, float hardness, boolean hasOre) 
+	public Metal(String name, int harvestLevel, float hardness, boolean hasOre) 
 	{
 		SetName(name);
+		SetHarvestLevel(harvestLevel);
 		SetHardness(hardness);
 		SetHasOre(hasOre);
+		
+		
 		
 		SetSpawnChance(20);
 		SetSpawnHight(10, 100);
 		SetSpawnSize(3, 30);
 	}
 	
-	public Metal(String name, float hardness, boolean hasOre, int spawnChance, int minSpawnHight, int maxSpawnHight, int minSpawnSize, int maxSpawnSize) 
+	public Metal(String name, int harvestLevel, float hardness, boolean hasOre, int spawnChance, int minSpawnHight, int maxSpawnHight, int minSpawnSize, int maxSpawnSize) 
 	{
 		SetName(name);
+		SetHarvestLevel(harvestLevel);
 		SetHardness(hardness);
 		SetHasOre(hasOre);
 		
@@ -42,6 +47,7 @@ public class Metal {
 	}
 	
 	public void SetName(String name) { this._name = name; }
+	public void SetHarvestLevel(int level) { this._harvestLevel = level; }
 	public void SetHardness(float hardness) { this._hardness = hardness; }
 	public void SetHasOre(boolean has) { this._hasOre = has; }
 	
@@ -65,6 +71,7 @@ public class Metal {
 	}
 	
 	public final String GetName() { return _name; }
+	public int GetHarvestLevel() { return this._harvestLevel; }
 	public final float GetHardness() { return _hardness; }
 	public boolean GetHasOre() { return this._hasOre; }
 	
