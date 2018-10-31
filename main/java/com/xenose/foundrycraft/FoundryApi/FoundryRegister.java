@@ -29,8 +29,6 @@ public class FoundryRegister
 	{
 		itemReg.register(item);
 		item.SetTexture();
-		
-		System.out.println("added " + item.getRegistryName() + " to registry");
 		itemCount++;
 	}
 	
@@ -43,8 +41,6 @@ public class FoundryRegister
 		itemReg.register(item);
 
 		block.SetTexture();
-		
-		System.out.println("added " + item.getRegistryName() + " to registry");
 		blockCount++;
 	}
 	
