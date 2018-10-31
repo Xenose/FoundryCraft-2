@@ -1,78 +1,59 @@
 package com.xenose.foundrycraft.MetalTypes;
 
-import java.util.List;
-
-import com.xenose.foundrycraft.FoundryApi.FoundryItem;
-import com.xenose.foundrycraft.FoundryApi.FoundryWorldGen;
-import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
-import com.xenose.foundrycraft.blocks.LithiumOre;
 
-import net.minecraft.block.material.Material;
-
-public class Metal 
-{
-	FoundryItem _dust = null;
-	FoundryItem _ingot = null;
+public class Metal {
 	
-	FoundryOre _ore = null;
-	FoundryBlock _block = null;
+	private String _name;
+	private float _hardness;
+	private Class _ore;
 	
-	public Metal(String name, float hardness) 
+	private int _spawnChance;
+	private int _maxSpawnHight;
+	private int _minSpawnHight;
+	private int _maxSpawnSize;
+	private int _minSpawnSize;
+	
+	public Metal() {}
+	
+	public Metal(String name, float hardness, Class ore, int spawnChance, int minSpawnHight, int maxSpawnHight, int minSpawnSize, int maxSpawnSize) 
 	{
-		Init(name, hardness, 20, 10, 20, 1, 100);
+		SetName(name);
+		SetHardness(hardness);
+		SetSpawnChance(spawnChance);
+		SetSpawnHight(minSpawnHight, maxSpawnHight);
+		SetSpawnSize(minSpawnSize, maxSpawnSize);
 	}
 	
-	public Metal(String name, float hardness, int worldSpawnChance, int minSpawnSize, int maxSpawnSize)
+	public void SetName(String name) { this._name = name; }
+	public void SetHardness(float hardness) { this._hardness = hardness; }
+	
+	public void SetSpawnChance(int spawnChance) { this._spawnChance = spawnChance; }
+	public void SetMaxSpawnHight(int maxHight) { this._maxSpawnHight = maxHight; }
+	public void SetMinSpawnHight(int minHight) { this._minSpawnHight = minHight; }
+	
+	public void SetSpawnHight(int minHight, int maxHight) 
 	{
-		Init(name, hardness, worldSpawnChance, minSpawnSize, maxSpawnSize, 1, 100);
+		SetMinSpawnHight(minHight);
+		SetMaxSpawnHight(maxHight);
 	}
 	
-	public Metal(String name, float hardness, int worldSpawnChance, int minSpawnSize, int maxSpawnSize, int minHeight, int maxHeight) 
+	public void SetMaxSpawnSize(int maxSize) { this._maxSpawnSize = maxSize; }
+	public void SetMinSpawnSize(int minSize) { this._minSpawnSize = minSize; }
+	
+	public void SetSpawnSize(int minSize, int maxSize) 
 	{
-		Init(name, hardness, worldSpawnChance, minSpawnSize, maxSpawnSize, minHeight, maxHeight);
+		SetMinSpawnSize(minSize);
+		SetMaxSpawnSize(maxSize);
 	}
 	
-	private void Init(String name, float hardness, int worldSpawnChance, int minSpawnSize, int maxSpawnSize, int minHeight, int maxHeight) 
-	{
-		_ingot = new FoundryItem(name + "ingot");
-		_dust = new FoundryItem(name + "dust");
-		
-		if (name != "lithium")
-		{
-			_ore = new FoundryOre(name + "ore");
-		}
-		else 
-		{
-			_ore = new LithiumOre(name + "ore");
-		}
-		
-		_block = new FoundryBlock(Material.IRON, name + "block");
-		
-		_block.SetHardness(hardness);
-		_ore.SetHardness(hardness);
-		
-		_ore.SetSpawnChance(worldSpawnChance);
-		_ore.SetSpawnSize(maxSpawnSize, minSpawnSize);		
-		_ore.SetMinMaxHight(minHeight, maxHeight);
-		
-		if (_ore != null)
-			FoundryWorldGen.oreGenList_overWolrd.add(_ore);
-	}
+	public final String GetName() { return _name; }
+	public final float GetHardness() { return _hardness; }
 	
-	public final FoundryItem GetDust() { return _dust; }
-	public final FoundryItem GetIngot() { return _ingot; }
-	
-	public final FoundryBlock GetOre() { return _ore; }
-	public final FoundryBlock GetBlock() { return _block; }
-	
-	public void AddToList(List<FoundryItem> itemList, List<FoundryBlock> blockList) 
-	{
-		itemList.add(_dust);
-		itemList.add(_ingot);
-		
-		blockList.add(_ore);
-		blockList.add(_block);
-	}
+	public final int GetSpawnChance() { return _spawnChance; }
+	public final int GetMaxSpawnHight() { return  _maxSpawnHight; }
+	public final int GetMinSpawnHight() { return _minSpawnSize; }
+	public final int GetMaxSpawnSize() { return _maxSpawnSize; }
+	public final int GetMinSpawnSize() { return _minSpawnSize; }
 
 }
