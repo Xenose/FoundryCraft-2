@@ -8,6 +8,7 @@ import javax.swing.plaf.metal.MetalScrollBarUI;
 
 import com.xenose.foundrycraft.FoundryApi.FoundryRegister;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
+import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlockAdvanceBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
 import com.xenose.foundrycraft.FoundryApi.items.FoundryItem;
 import com.xenose.foundrycraft.FoundryApi.items.tools.BedrockRemovelTool;
@@ -67,6 +68,8 @@ public class AddObjects
 	public static final ClearGlass clearglass = new ClearGlass("clearglass");
 	public static final BleedingObsidian bleedingobsidian = new BleedingObsidian("bleedingobsidian");
 	
+	public static final FoundryBlockAdvanceBlock test = new FoundryBlockAdvanceBlock(Material.ROCK, "test");
+	
 	public static final IronFurnace ironfurnace = new IronFurnace("ironfurnace");
 	
 	private static List<FoundryItem> itemList;
@@ -113,6 +116,7 @@ public class AddObjects
 		blockList.add(clearglass);
 		blockList.add(bleedingobsidian);
 		blockList.add(ironfurnace);
+		blockList.add(test);
 	}
 
 }

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "xfc:blocks/temporary",
+    "down": "xfc:blocks/temporarye",
+    "up": "xfc:blocks/temporary",
+    "east": "xfc:blocks/temporary",
+    "west": "xfc:blocks/temporary",
+    "north": "xfc:blocks/temporary",
+    "south": "xfc:blocks/temporary"
+  }
+}
+
