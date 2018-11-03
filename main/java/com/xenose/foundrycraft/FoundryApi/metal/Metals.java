@@ -18,6 +18,7 @@ import net.minecraftforge.oredict.OreDictionary;
 public class Metals 
 {
 	FoundryItem _dust = null;
+	FoundryItem _nuget = null;
 	FoundryItem _ingot = null;
 	
 	FoundryOre _ore = null;
@@ -25,14 +26,16 @@ public class Metals
 	
 	public Metals(Metal metal)
 	{
-		_ingot = new FoundryItem(metal.GetName() + "ingot");
 		_dust = new FoundryItem(metal.GetName() + "dust");
+		_nuget = new FoundryItem(metal.GetName() + "nugget");
+		_ingot = new FoundryItem(metal.GetName() + "ingot");
 		_block = new FoundryBlock(Material.IRON, metal.GetName() + "block");
 		
 		_block.SetHardness(metal.GetHardness());
 		
 		_block.setCreativeTab(FoundryCraftData.oreTab);
 		_ingot.setCreativeTab(FoundryCraftData.oreTab);
+		_nuget.setCreativeTab(FoundryCraftData.oreTab);
 		_dust.setCreativeTab(FoundryCraftData.oreTab);
 		
 		if (metal.GetHasOre()) 
@@ -61,6 +64,7 @@ public class Metals
 	}
 	
 	public final FoundryItem GetDust() { return _dust; }
+	public final FoundryItem GetNuget() { return _nuget; }
 	public final FoundryItem GetIngot() { return _ingot; }
 	
 	public final FoundryBlock GetOre() { return _ore; }
@@ -69,6 +73,7 @@ public class Metals
 	public void AddToList(List<FoundryItem> itemList, List<FoundryBlock> blockList) 
 	{
 		itemList.add(_dust);
+		itemList.add(_nuget);
 		itemList.add(_ingot);
 		blockList.add(_block);
 		

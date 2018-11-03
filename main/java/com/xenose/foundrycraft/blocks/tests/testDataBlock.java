@@ -56,19 +56,7 @@ public class testDataBlock extends FoundryBlockAdvanceBlock implements ITileEnti
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) 
 	{
-		for (int x = 0; x <= 8; x++) 
-		{
-			for (int y = 0; y <= 8; y++) 
-			{
-				for (int z = 0; z <= 8; z++) 
-				{
-					if (y == 0 || y == 8 || z == 0 || z == 8 || x == 0 || x == 8)
-						worldIn.setBlockState(new BlockPos(pos.getX() + x - 4, pos.getY() - 1 + y, pos.getZ() + z - 4), Blocks.STONE.getDefaultState(), 1);
-					else
-						worldIn.setBlockToAir(new BlockPos(pos.getX() + x - 4, pos.getY() - 1 + y, pos.getZ() + z - 4));
-				}
-			}
-		}
+		
 		return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
 	}
 }
