@@ -11,6 +11,7 @@ public class FoundryOreDictionary {
 		OreDictionary.registerOre("dustCoal", AddObjects.coaldust);
 		OreDictionary.registerOre("dustIron", AddObjects.irondust);
 		
+		OreDictionary.registerOre("dustBronze", 	AddObjects.metalList.get("bronze").GetDust());
 		OreDictionary.registerOre("dustSteel", 		AddObjects.metalList.get("highgradesteel").GetDust());
 		
 		OreDictionary.registerOre("dustAluminium", 	AddObjects.metalList.get("aluminium").GetDust());

@@ -11,7 +11,6 @@ import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlockAdvanceBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
 import com.xenose.foundrycraft.FoundryApi.items.FoundryItem;
-import com.xenose.foundrycraft.FoundryApi.items.tools.BedrockRemovelTool;
 import com.xenose.foundrycraft.FoundryApi.items.tools.FoundryPickaxe;
 import com.xenose.foundrycraft.MetalTypes.Metal;
 import com.xenose.foundrycraft.MetalTypes.Metals;
@@ -19,6 +18,8 @@ import com.xenose.foundrycraft.blocks.BleedingObsidian;
 import com.xenose.foundrycraft.blocks.ClearGlass;
 import com.xenose.foundrycraft.blocks.Lamp;
 import com.xenose.foundrycraft.blocks.machines.IronFurnace;
+import com.xenose.foundrycraft.blocks.tests.testDataBlock;
+import com.xenose.foundrycraft.items.BedrockRemovelTool;
 import com.xenose.foundrycraft.items.CoalDust;
 
 import net.minecraft.block.material.Material;
@@ -28,9 +29,8 @@ import net.minecraft.block.material.Material;
 public class AddObjects 
 {	
 	
-	
 	private final static Metal metals[] = {
-					//name	Hardness/hasOre/spawnChance/Hight[min,max]/spawnsize[min,max]
+				//name	picklevel/Hardness/hasOre/spawnChance/Hight[min,max]/spawnsize[min,max]
 			new Metal("aluminium",  1, 4,  true, 	18, 	60, 70, 	3, 7),
 			new Metal("cobalt", 	5, 20, true, 	20, 	1, 10, 		1, 3),
 			new Metal("copper", 	2, 4,  true, 	10, 	40, 60, 	3, 8),
@@ -50,6 +50,9 @@ public class AddObjects
 			new Metal("uranium", 	4, 16, true,	15,		10,	50,		1, 3),
 			new Metal("zinc", 		3, 16, true,	20,		70, 100,	4, 10),
 			
+			new Metal("brass",		2, 3,  false),
+			new Metal("bronze",		2, 4,  false),
+			
 			new Metal("lowgradesteel", 	2, 16, false),
 			new Metal("highgradesteel", 4, 16, false)
 	};
@@ -68,7 +71,7 @@ public class AddObjects
 	public static final ClearGlass clearglass = new ClearGlass("clearglass");
 	public static final BleedingObsidian bleedingobsidian = new BleedingObsidian("bleedingobsidian");
 	
-	public static final FoundryBlockAdvanceBlock test = new FoundryBlockAdvanceBlock(Material.ROCK, "test");
+	public static final testDataBlock test = new testDataBlock("test");
 	
 	public static final IronFurnace ironfurnace = new IronFurnace("ironfurnace");
 	

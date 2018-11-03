@@ -6,6 +6,7 @@ import com.xenose.foundrycraft.FoundryApi.FoundryWorldGen;
 import com.xenose.foundrycraft.FoundryApi.Proxy.CommonProxy;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
 import com.xenose.foundrycraft.TileEntitys.TileEntityIronFurnace;
+import com.xenose.foundrycraft.TileEntitys.tests.testTileEntity;
 import com.xenose.foundrycraft.crafting.FoundryRecipes;
 
 import net.minecraft.block.material.Material;
@@ -36,7 +37,8 @@ public class FoundryCraft
 	@EventHandler
     public void PreInit(FMLPreInitializationEvent event)
     {
-		
+
+		GameRegistry.registerTileEntity(testTileEntity.class, new ResourceLocation(FoundryCraftData.id + "testTileEntity"));
 		AddObjects.Init();
 		System.out.println("FoundryCraft [Blocks loaded] : " + FoundryRegister.blockCount + ", [Items loaded] : " + FoundryRegister.itemCount);
 		
