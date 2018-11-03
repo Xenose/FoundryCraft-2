@@ -1,4 +1,4 @@
-package com.xenose.foundrycraft.MetalTypes;
+package com.xenose.foundrycraft.FoundryApi.metal;
 
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;

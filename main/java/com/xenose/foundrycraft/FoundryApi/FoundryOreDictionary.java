@@ -1,6 +1,6 @@
 package com.xenose.foundrycraft.FoundryApi;
 
-import com.xenose.foundrycraft.AddObjects;
+import com.xenose.foundrycraft.init.AddObjects;
 
 import net.minecraftforge.oredict.OreDictionary;
 

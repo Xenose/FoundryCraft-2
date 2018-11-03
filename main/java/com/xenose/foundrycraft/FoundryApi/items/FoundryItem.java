@@ -13,7 +13,7 @@ public class FoundryItem extends Item
 	{
 		this.setRegistryName(FoundryCraftData.id, name);
 		this.setUnlocalizedName(name);
-		this.setCreativeTab(getCreativeTab().MISC);
+		this.setCreativeTab(FoundryCraftData.defualtTab);
 		
 		System.out.println(this.getRegistryName());
 		System.out.println(this.getUnlocalizedName());

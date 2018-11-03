@@ -1,6 +1,6 @@
-package com.xenose.foundrycraft.crafting;
+package com.xenose.foundrycraft.init.crafting;
 
-import com.xenose.foundrycraft.AddObjects;
+import com.xenose.foundrycraft.init.AddObjects;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;

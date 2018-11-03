@@ -1,10 +1,11 @@
-package com.xenose.foundrycraft.MetalTypes;
+package com.xenose.foundrycraft.FoundryApi.metal;
 
 import java.util.List;
 
 import scala.collection.mutable.Cloneable;
 import scala.tools.nsc.backend.icode.analysis.TypeFlowAnalysis.MTFAGrowable;
 
+import com.xenose.foundrycraft.FoundryCraftData;
 import com.xenose.foundrycraft.FoundryApi.FoundryWorldGen;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
@@ -29,6 +30,10 @@ public class Metals
 		_block = new FoundryBlock(Material.IRON, metal.GetName() + "block");
 		
 		_block.SetHardness(metal.GetHardness());
+		
+		_block.setCreativeTab(FoundryCraftData.oreTab);
+		_ingot.setCreativeTab(FoundryCraftData.oreTab);
+		_dust.setCreativeTab(FoundryCraftData.oreTab);
 		
 		if (metal.GetHasOre()) 
 		{

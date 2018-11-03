@@ -1,7 +1,7 @@
 package com.xenose.foundrycraft.TileEntitys;
 
 import com.xenose.foundrycraft.FoundryApi.FoundryTileEntity;
-import com.xenose.foundrycraft.crafting.Smelting;
+import com.xenose.foundrycraft.init.crafting.Smelting;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

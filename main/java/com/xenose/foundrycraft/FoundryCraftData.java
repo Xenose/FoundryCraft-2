@@ -1,5 +1,7 @@
 package com.xenose.foundrycraft;
 
+import com.xenose.foundrycraft.FoundryApi.client.tabs.FoundryTab;
+
 public class FoundryCraftData
 {
 	public static final String id = "xfc";
@@ -10,4 +12,8 @@ public class FoundryCraftData
 	public static final String serverProxy = "com.xenose.foundrycraft.FoundryApi.Proxy.serverProxy";
 	
 	public static final int GUI_IRON_FURNACE = 0;
+	
+	public static final FoundryTab
+		defualtTab = new FoundryTab("defualttab", 0),
+		oreTab = new FoundryTab("oretab", 1);
 }

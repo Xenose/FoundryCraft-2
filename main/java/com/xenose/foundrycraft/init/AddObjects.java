@@ -1,4 +1,4 @@
-package com.xenose.foundrycraft;
+package com.xenose.foundrycraft.init;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +12,8 @@ import com.xenose.foundrycraft.FoundryApi.blocks.FoundryBlockAdvanceBlock;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
 import com.xenose.foundrycraft.FoundryApi.items.FoundryItem;
 import com.xenose.foundrycraft.FoundryApi.items.tools.FoundryPickaxe;
-import com.xenose.foundrycraft.MetalTypes.Metal;
-import com.xenose.foundrycraft.MetalTypes.Metals;
+import com.xenose.foundrycraft.FoundryApi.metal.Metal;
+import com.xenose.foundrycraft.FoundryApi.metal.Metals;
 import com.xenose.foundrycraft.blocks.BleedingObsidian;
 import com.xenose.foundrycraft.blocks.ClearGlass;
 import com.xenose.foundrycraft.blocks.Lamp;

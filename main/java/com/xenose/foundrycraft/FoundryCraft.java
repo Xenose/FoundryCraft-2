@@ -7,7 +7,8 @@ import com.xenose.foundrycraft.FoundryApi.Proxy.CommonProxy;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
 import com.xenose.foundrycraft.TileEntitys.TileEntityIronFurnace;
 import com.xenose.foundrycraft.TileEntitys.tests.testTileEntity;
-import com.xenose.foundrycraft.crafting.FoundryRecipes;
+import com.xenose.foundrycraft.init.AddObjects;
+import com.xenose.foundrycraft.init.crafting.FoundryRecipes;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;

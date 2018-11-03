@@ -1,5 +1,7 @@
 package com.xenose.foundrycraft.FoundryApi.blocks;
 
+import com.xenose.foundrycraft.FoundryCraftData;
+
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
@@ -16,6 +18,7 @@ public class FoundryOre extends FoundryBlock
 	{
 		super(Material.ROCK, name);
 		SetSoundType(SoundType.STONE);
+		setCreativeTab(FoundryCraftData.oreTab);
 	}
 	
 	public void SetHarvestLevel(int level) 

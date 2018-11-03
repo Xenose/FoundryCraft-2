@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.xenose.foundrycraft.AddObjects;
 import com.xenose.foundrycraft.FoundryApi.blocks.FoundryOre;
+import com.xenose.foundrycraft.init.AddObjects;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;

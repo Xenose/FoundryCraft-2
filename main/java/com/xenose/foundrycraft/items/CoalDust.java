@@ -10,6 +10,7 @@ public class CoalDust extends FoundryItem
 	public CoalDust(String name)
 	{
 		super(name);
+		setCreativeTab(FoundryCraftData.oreTab);
 	}
 	
 	@Override

@@ -32,7 +32,7 @@ public class FoundryBlock extends Block
 	{
 		this.setRegistryName(FoundryCraftData.id, name);
 		this.setUnlocalizedName(name);
-		this.setCreativeTab(getCreativeTabToDisplayOn().MISC);
+		this.setCreativeTab(FoundryCraftData.defualtTab);
 	}
 	
 	public void SetHardness(float hardness) 
